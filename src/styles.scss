@@ -1,0 +1,150 @@
+body, .App {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  color: white;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background: linear-gradient(172deg, #09212c 15.72%, #043e49 68.5%);
+  display: flex;
+
+
+  .bg {
+    margin-left: auto;
+    object-fit: contain;
+    height: 100vh;
+  }
+}
+
+main {
+  position: absolute;
+  border-radius: 24px;
+  background: linear-gradient(124deg, rgba(0, 0, 0, 0.36) 5.12%, rgba(0, 0, 0, 0.07) 102.99%);
+  backdrop-filter: blur(4px);
+  inset: auto auto 30vh 5vw;
+  width: 40vw;
+  padding: 3rem;
+  text-align: start;
+
+  h1 {
+    font-family: Roboto;
+    font-size: 2.5rem;
+  }
+
+  p {
+    line-height: 1.7;
+    font-size: 1.4rem;
+  }
+
+  button {
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+    background: #63E1E1;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px rgba(99, 225, 225, 0.25);
+  }
+}
+
+section {
+  position: absolute;
+  bottom: 2rem;
+  inset: auto 5vw 5vh 5vw;
+
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.80);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+  backdrop-filter: blur(4px);
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    text-align: left;
+    gap: 1.5rem;
+    margin-bottom: .5rem;
+
+    h4 {
+      font-size: 1.2rem;
+      margin: 0;
+      margin-top: .5rem;
+    }
+    
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  main {
+    width: 35vw;
+    padding: 1rem 3rem;
+    inset: auto auto 35vh 5vw;
+
+    p {
+      line-height: 1.4;
+      font-size: 1.3rem;
+    }  
+
+     button {
+      padding: 1rem 2.5rem;
+      font-size: 1.3rem;
+     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .App .bg {
+    width: 100vw;
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  main {
+    box-sizing: border-box;
+    width: 100vw;
+    inset: 0;
+    top: auto;
+    bottom: 0;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  section {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    inset: 0;
+    background: none;
+
+    ul {
+      text-align: center;
+      flex-direction: column;
+      padding: 1rem;
+
+      li {
+        padding-bottom: 1rem;
+
+        h4 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
